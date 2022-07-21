@@ -1,0 +1,79 @@
+@import './designSystem.sass'
+
+*, ::before, ::after
+  box-sizing: border-box
+
+body, pre, input, button, textarea, select, legend
+  font-family: Lato, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif
+  color: $color-default
+
+html
+  font-size: 16px
+
+body
+  background-color: $color-background
+  margin: 0
+  font-size: rem(16)
+  font-size: 16px
+  word-break: keep-all
+  padding-top: rem(58)
+
+  +mq(minXsmall)
+    padding-top: rem(110)
+
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  margin-bottom: 0
+
+a
+  text-decoration: none
+  -webkit-tap-highlight-color: rgba(255,255,255,.10)
+
+fieldset
+  margin: 0
+  padding: 0
+
+legend
+  +mixin(screenReaderOnly)
+
+label
+  cursor: pointer
+
+img, fieldset
+  border: 0
+
+p, ul, dl, pre
+  margin-top: 0
+  margin-bottom: 0
+
+ul, ol
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 0
+  list-style-type: none
+
+dd
+  margin-left: 0
+
+button
+  cursor: pointer
+  border: 0
+  padding: 0
+
+figure
+  margin: 0
+
+address, cite
+  font-style: normal
+
+.container
+  background-color: $color-white
+  width: 100%
+
+.contents
+  padding-top: rem(50)
+  padding-bottom: rem(100)
+
+  +mq(minXsmall)
+    padding-top: rem(100)
+    padding-bottom: rem(150)
