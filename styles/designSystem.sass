@@ -1,0 +1,119 @@
+$padding-horizontal: 15
+$default-width: 1250
+$total-width: $padding-horizontal * 2 + $default-width
+
+$browser-context: 16
+
+$color-black: #000
+$color-white: #FFF
+$color-default: #5A433D
+$color-accent: #1EBBEF
+$color-important: #222
+$color-primary: rgba(90, 67, 61, 0.7)
+$color-background: #F2F2F2
+
+@function rem($pixel, $context: $browser-context)
+  @return #{$pixel/$context}rem
+
+@function em($pixel, $context: $browser-context)
+  @return #{$pixel/$context}em
+
+=mq($mediaquery)
+  @if $mediaquery == maxMobile
+    @media screen and (max-width: rem(480))
+      @content
+
+  @if $mediaquery == minTablet
+    @media screen and (min-width: rem(481))
+      @content
+
+  @if $mediaquery == maxTablet
+    @media screen and (max-width: rem(768))
+      @content
+
+  @if $mediaquery == minXsmall
+    @media screen and (min-width: rem(769))
+      @content
+
+  @if $mediaquery == maxXsmall
+    @media screen and (max-width: rem(1024))
+      @content
+
+  @if $mediaquery == minSmall
+    @media screen and (min-width: rem(1025))
+      @content
+
+  @if $mediaquery == maxSmall
+    @media screen and (max-width: rem(1200))
+      @content
+
+  @if $mediaquery == minLarge
+    @media screen and (min-width: rem(1201))
+      @content
+
+  @if $mediaquery == maxLarge
+    @media screen and (max-width: rem(1280))
+      @content
+
+  @if $mediaquery == minXlarge
+    @media screen and (min-width: rem(1281))
+      @content
+
+=mixin($style)
+  @if $style == widthSettings
+    margin: 0 auto
+    padding-right: Rem(paddingHorizontal)
+    padding-left: Rem(paddingHorizontal)
+    width: 100%
+    max-width: Rem(totalWidth)
+
+  @if $style == col
+    display: block
+    flex: 1 0 0%
+    width: 100%
+    max-width: 100%
+
+  @if $style == colAuto
+    flex: 0 0 auto
+    width: auto
+
+  @if $style == ellipsis
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  @if $style == clearfix
+    &::after
+      display: block
+      clear: both
+      content: ''
+
+  @if $style == screenReaderOnly
+    position: absolute
+    overflow: hidden
+    margin: 0
+    width: 1px
+    height: 1px
+    clip: rect(1px, 1px, 1px, 1px)
+
+  @if $style == visuallyHiddenFocuable
+    position: absolute
+    overflow: hidden
+    z-index: 20
+    margin: 0
+    width: auto
+    height: auto
+    clip: auto
+
+  @if $style == imageRendering
+    image-rendering: -webkit-optimize-contrast
+    backface-visibility: hidden
+
+=clamp($line, $maxheight, $lineheight)
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $line
+  max-height: rem($maxheight)
+  line-height: $lineheight

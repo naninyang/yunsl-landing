@@ -249,6 +249,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/lato@npm:^4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/lato@npm:4.5.8"
+  checksum: 73ad91ebaca40ff771b3e7b6c38847dead7b6df5ec61f837c3a787a3e08a0bc8ce2cf7f92e2c574165124d552afe9e6dd081f2cabcfb46dd826474f934f510ba
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-kr@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/noto-sans-kr@npm:4.5.10"
+  checksum: 3cb14b0c16bb74e36aeed8ac603cff7f89a6e6b974ca52de59089cc7f62604292fdeee21757d16348b3ae6f99421017f98ad44140b2b121470e50417f1bc10c6
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -3715,6 +3729,8 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@fontsource/lato": ^4.5.8
+    "@fontsource/noto-sans-kr": ^4.5.10
     eslint: 8.20.0
     eslint-config-next: 12.2.2
     i18next: ^21.8.14
