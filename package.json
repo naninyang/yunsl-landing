@@ -9,12 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "i18next": "^21.8.14",
+    "minimist": "^1.2.6",
     "next": "12.2.2",
+    "next-i18next": "^11.2.2",
+    "next-images": "^1.8.4",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "eslint": "8.20.0",
-    "eslint-config-next": "12.2.2"
+    "eslint-config-next": "12.2.2",
+    "sass": "^1.53.0"
   }
 }
