@@ -1,13 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next'
-import styles from '../styles/Home.module.css'
+import Started from '../components/sections/started'
 
 function Home() {
   const { i18n, t } = useTranslation('common')
 
   return (
     <>
-      {t('test.blah')}
+      <Started />
     </>
   )
 }

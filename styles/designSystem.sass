@@ -18,6 +18,9 @@ $color-background: #F2F2F2
 @function em($pixel, $context: $browser-context)
   @return #{$pixel/$context}em
 
+@function vw($pixel, $view-width)
+  @return #{$pixel*100/$view-width}vw
+
 =mq($mediaquery)
   @if $mediaquery == maxMobile
     @media screen and (max-width: rem(480))
@@ -44,18 +47,10 @@ $color-background: #F2F2F2
       @content
 
   @if $mediaquery == maxSmall
-    @media screen and (max-width: rem(1200))
-      @content
-
-  @if $mediaquery == minLarge
-    @media screen and (min-width: rem(1201))
-      @content
-
-  @if $mediaquery == maxLarge
     @media screen and (max-width: rem(1280))
       @content
 
-  @if $mediaquery == minXlarge
+  @if $mediaquery == minLarge
     @media screen and (min-width: rem(1281))
       @content
 

@@ -16,10 +16,6 @@ body
   font-size: rem(16)
   font-size: 16px
   word-break: keep-all
-  padding-top: rem(58)
-
-  +mq(minXsmall)
-    padding-top: rem(110)
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
@@ -66,14 +62,12 @@ figure
 address, cite
   font-style: normal
 
-.container
+section
   background-color: $color-white
+  display: flex
+  align-items: center
   width: 100%
+  min-height: 100vh
 
-.contents
-  padding-top: rem(50)
-  padding-bottom: rem(100)
-
-  +mq(minXsmall)
-    padding-top: rem(100)
-    padding-bottom: rem(150)
+  picture
+    width: 100%

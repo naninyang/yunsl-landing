@@ -1,5 +1,5 @@
-const paddingHorizontal = 15;
-const defaultWidth = 1250;
+const paddingHorizontal = 25;
+const defaultWidth = 1230;
 const totalWidth = paddingHorizontal * 2 + defaultWidth;
 
 export const mq = {
@@ -9,10 +9,8 @@ export const mq = {
   minXsmall: `@media screen and (min-width: ${Rem(769)})`,
   maxXsmall: `@media screen and (max-width: ${Rem(1024)})`,
   minSmall: `@media screen and (min-width: ${Rem(1025)})`,
-  maxSmall: `@media screen and (max-width: ${Rem(1200)})`,
-  minLarge: `@media screen and (min-width: ${Rem(1201)})`,
-  maxLarge: `@media screen and (max-width: ${Rem(1280)})`,
-  minXlarge: `@media screen and (min-width: ${Rem(1281)})`,
+  maxSmall: `@media screen and (max-width: ${Rem(1280)})`,
+  minLarge: `@media screen and (min-width: ${Rem(1281)})`,
 };
 
 export const colors = {
