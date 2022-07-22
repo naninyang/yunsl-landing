@@ -1,0 +1,139 @@
+@import './designSystem.sass'
+
+.i18n
+  position: absolute
+  top: rem(15)
+  right: rem(15)
+
+  li
+    display: inline-block
+
+    a
+      display: block
+      border-bottom-style: solid
+      border-bottom-width: rem(2)
+      padding: rem(10)
+      color: $color-important
+      text-transform: uppercase
+
+.contents
+  & + picture
+    width: auto
+
+    +mq(maxTablet)
+      position: relative
+      margin-top: em(25)
+
+    +mq(minXsmall)
+      position: absolute
+      transform: translate(0, -50%)
+      top: 50%
+      right: vw(-320, 1024)
+      left: calc(50% + 2.65625vw)
+      margin: 0 rem(25)
+
+    +mq(minLarge)
+      right: 0
+      left: calc(50% + 34px)
+
+  .headline
+    display: flex
+    flex-direction: column-reverse
+
+    +mq(maxTablet)
+      text-align: center
+
+    h1
+      position: relative
+      margin-bottom: vw(30, 320)
+      font-weight: 900
+      font-size: vw(30, 320)
+      color: $color-important
+
+      +mq(minXsmall)
+        margin-bottom: vw(61, 1280)
+        padding-right: vw(61, 1280)
+        font-size: vw(78, 1280)
+
+      +mq(minLarge)
+        margin-bottom: rem(61)
+        padding-right: rem(61)
+        font-size: rem(78)
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        bottom: vw(-5, 320)
+        left: 0
+        background-color: $color-important
+        height: vw(5, 320)
+
+        +mq(minXsmall)
+          bottom: vw(-10, 1280)
+          width: 100%
+          height: vw(10, 1280)
+
+        +mq(minLarge)
+          bottom: rem(-10)
+          height: rem(10)
+
+    p
+      margin-bottom: vw(5, 320)
+      font-size: vw(14, 320)
+      line-height: 1.5
+      color: $color-white
+
+      +mq(minXsmall)
+        margin-bottom: vw(20, 1280)
+        font-size: vw(32, 1280)
+
+      +mq(minLarge)
+        margin-bottom: rem(20)
+        font-size: rem(32)
+
+      span
+        display: block
+        line-height: 1.5
+
+  .description
+    +mq(maxTablet)
+      text-align: center
+
+    p
+      font-size: vw(11, 320)
+      line-height: 1.5
+      color: $color-white
+
+      +mq(minXsmall)
+        font-size: vw(24, 1280)
+
+      +mq(minLarge)
+        font-size: rem(24)
+
+      &:first-of-type
+        margin-bottom: vw(30, 1280)
+
+        +mq(minXsmall)
+          margin-bottom: vw(15, 1280)
+
+        +mq(minLarge)
+          margin-bottom: rem(15)
+
+      span
+        display: block
+        line-height: 1.5
+
+      small
+        color: $color-default
+        line-height: 1
+        font-size: vw(10, 320)
+
+        +mq(minXsmall)
+          font-size: vw(20, 1280)
+
+        +mq(minLarge)
+          font-size: rem(20)
+
+        span
+          line-height: 1
