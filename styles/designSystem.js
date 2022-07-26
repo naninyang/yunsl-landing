@@ -23,6 +23,10 @@ export const colors = {
   background: '#F2F2F2',
 };
 
+export const ar = {
+  support: `@supports not (aspect-ratio: 1)`,
+};
+
 export const mixin = {
   widthSettings: {
     margin: '0 auto',

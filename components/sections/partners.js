@@ -8,6 +8,7 @@ import { images } from '../../images'
 
 const Container = styled.section({
   backgroundColor: colors.white,
+  position: 'relative',
   '& > div': {
     display: 'flex',
     justifyContent: 'space-between',
@@ -21,6 +22,28 @@ const Company = styled.em({
   },
 })
 
+const Dummy = styled.i({
+  position: 'absolute',
+  overflow: 'hidden',
+  aspectRatio: '1920 / 170',
+  backgroundColor: colors.accent,
+  top: '-4.4vw',
+  left: 0,
+  width: '100%',
+  height: 'auto',
+  '&::after': {
+    content: "''",
+    display: 'block',
+    position: 'absolute',
+    backgroundColor: colors.white,
+    transform: 'skewY(-5deg)',
+    bottom: 'calc(100vw - 104.4vw)',
+    left: 0,
+    width: '100%',
+    height: '100%',
+  },
+})
+
 const Img = styled.img({
   width: '100%',
   height: 'auto',
@@ -31,6 +54,7 @@ function Partners() {
 
   return (
     <Container>
+      <Dummy />
       <Contents>
         <div className={styles['contents']}>
           <div className={styles['headline']}>
