@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { mixin, mq } from './designSystem'
+import { mq } from './designSystem'
 
 export const Contents = styled.div(({ isRight }) => ({
   display: 'flex',

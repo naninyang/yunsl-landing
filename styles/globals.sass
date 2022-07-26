@@ -69,14 +69,20 @@ section
   width: 100%
   min-height: 100vh
 
-  +mq(maxTablet)
-    padding: vw(50, 320) rem(25)
+  > div
+    +mixin(widthSettings)
 
-  +mq(minXsmall)
-    padding: vw(50, 1280) rem(25)
+    +mq(maxTablet)
+      padding-top: vw(50, 320)
+      padding-bottom: vw(50, 320)
 
-  +mq(minLarge)
-    padding: rem(50) rem(25)
+    +mq(minXsmall)
+      padding-top: vw(50, 1280)
+      padding-bottom: vw(50, 1280)
+
+    +mq(minLarge)
+      padding-top: rem(50)
+      padding-bottom: rem(50)
 
   picture
     display: block

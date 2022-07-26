@@ -57,10 +57,10 @@ $color-background: #F2F2F2
 =mixin($style)
   @if $style == widthSettings
     margin: 0 auto
-    padding-right: Rem(paddingHorizontal)
-    padding-left: Rem(paddingHorizontal)
+    padding-right: rem($padding-horizontal)
+    padding-left: rem($padding-horizontal)
     width: 100%
-    max-width: Rem(totalWidth)
+    max-width: rem($total-width)
 
   @if $style == col
     display: block
