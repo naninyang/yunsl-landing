@@ -112,3 +112,26 @@ $color-background: #F2F2F2
   -webkit-line-clamp: $line
   max-height: rem($maxheight)
   line-height: $lineheight
+
+=not-supports-aspect-ratio
+  @supports not (aspect-ratio: 1)
+    @content
+
+=aspect-ratio($horizontal, $vertical)
+  aspect-ratio: $horizontal / $vertical
+  display: block
+  width: 100%
+  height: auto
+
+  +not-supports-aspect-ratio
+    &::before
+      content: ''
+      float: left
+      margin-left: -1px
+      padding-top: percentage($vertical / $horizontal)
+      width: 1px
+
+    &::after
+      content: ''
+      display: block
+      clear: both
