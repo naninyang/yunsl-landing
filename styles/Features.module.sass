@@ -4,7 +4,6 @@
   +mq(minXsmall)
     display: flex
     flex-direction: column
-    align-items: center
 
   & + picture
     display: block
@@ -33,6 +32,9 @@
       span
         display: block
 
+      strong
+        color: $color-accent
+
   .description
     +mq(minXsmall)
       margin-top: vw(25, 1280)
@@ -49,10 +51,12 @@
       +mq(minXsmall)
         margin-bottom: vw(20, 1280)
         font-size: vw(32, 1280)
+        letter-spacing: -.03em
 
       +mq(minLarge)
         margin-bottom: rem(20)
         font-size: rem(32)
+        letter-spacing: 0
 
       span
         display: block
