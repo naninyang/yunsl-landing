@@ -10,6 +10,13 @@ export const Contents = styled.div(({ isRight }) => ({
   },
   [mq.minXsmall]: {
     flexDirection: isRight ? 'row-reverse' : null,
+    justifyContent: 'space-between',
+    alignItems: 'center',
     textAlign: isRight ? 'right' : null,
+  },
+  '& > div': {
+    [mq.minXsmall]: {
+      alignItems: isRight ? 'flex-end' : 'flex-start',
+    },
   },
 }))

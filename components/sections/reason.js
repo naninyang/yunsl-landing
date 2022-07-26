@@ -1,22 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { v4 as uuidv4 } from 'uuid'
+import { useMediaQuery } from 'react-responsive'
 import styled from '@emotion/styled'
 import styles from '../../styles/Reason.module.sass'
 import { Contents } from '../../styles/common'
-import { colors, mq } from '../../styles/designSystem'
+import { colors } from '../../styles/designSystem'
 
 const Container = styled.section({
   backgroundColor: colors.default,
   color: colors.white,
-  '& > div': {
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    [mq.minXsmall]: {
-      flexDirection: 'row-reverse',
-      justifyContent: 'space-between',
-    },
-  },
 })
 
 const Img = styled.img({
@@ -26,6 +18,9 @@ const Img = styled.img({
 
 function Reason({ isRight }) {
   const { t, i18n } = useTranslation('common')
+  const isMobile = useMediaQuery({
+    query: "(max-width: 48rem)",
+  });
 
   return (
     <Container>
@@ -48,8 +43,20 @@ function Reason({ isRight }) {
           </div>
         </div>
         <picture>
-          <source srcSet={`/reason.webp?${uuidv4()}`} type="image/webp" />
-          <Img src={`/reason.png?${uuidv4()}`} alt='' />
+          {isMobile
+            ? (
+              <>
+                <source srcSet={`/why.webp?${uuidv4()}`} type="image/webp" />
+                <Img src={`/why.png?${uuidv4()}`} alt='' />
+              </>
+            )
+            : (
+              <>
+                <source srcSet={`/reason.webp?${uuidv4()}`} type="image/webp" />
+                <Img src={`/reason.png?${uuidv4()}`} alt='' />
+              </>
+            )
+          }
         </picture>
       </Contents>
     </Container>
