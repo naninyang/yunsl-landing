@@ -1,9 +1,13 @@
 @import './designSystem.sass'
 
 .i18n
-  position: absolute
+  position: fixed
+  z-index: 2
   top: rem(15)
   right: rem(15)
+  border-radius: rem(5)
+  padding: rem(5) rem(10)
+  background-color: rgba($color-important, .7)
 
   li
     display: inline-block
@@ -13,7 +17,7 @@
       border-bottom-style: solid
       border-bottom-width: rem(2)
       padding: rem(10)
-      color: $color-important
+      color: $color-background
       text-transform: uppercase
 
 .contents

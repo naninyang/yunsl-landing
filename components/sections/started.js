@@ -18,8 +18,8 @@ const Img = styled.img({
 })
 
 const LinkLanguage = styled(LinkButton)(({ isKorean }) => ({
-  borderBottomColor: isKorean ? colors.important : 'transparent',
-  fontWeight: isKorean ? 900 : 700,
+  borderBottomColor: isKorean ? colors.background : 'transparent',
+  fontWeight: isKorean ? 900 : 400,
   opacity: isKorean ? 1 : 0.7
 }))
 
