@@ -51,8 +51,8 @@ function Footer() {
         <div className={styles['footer']}>
           <p>cgwaterlb@gmail.com</p>
           <p>+82-10-7413-1102</p>
-          <p>사업자등록번호 511-81-26566</p>
-          <address>대전광역시 서구 대덕대로 239 소셜캠퍼스온 403호 주식회사 샘물터</address>
+          <p>{t('footer.registration')}</p>
+          <address>{t('footer.address')}</address>
           <strong>© Saemmulter Inc.</strong>
         </div>
       </Contents>
