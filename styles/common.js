@@ -3,7 +3,6 @@ import { mixin, mq } from './designSystem'
 
 export const Contents = styled.div(({ isRight }) => ({
   display: 'flex',
-  ...mixin.widthSettings,
   [mq.maxTablet]: {
     flexDirection: 'column',
     textAlign: 'center',
@@ -13,6 +12,7 @@ export const Contents = styled.div(({ isRight }) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     textAlign: isRight ? 'right' : null,
+    width: '100%',
   },
   '& > div': {
     [mq.minXsmall]: {
