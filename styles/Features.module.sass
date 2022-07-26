@@ -8,6 +8,9 @@
   & + picture
     display: block
 
+    +mq(maxTablet)
+      margin-top: vw(25, 320)
+
     +mq(minXsmall)
       width: vw(700, 1280)
 
@@ -50,8 +53,8 @@
 
       +mq(minXsmall)
         margin-bottom: vw(20, 1280)
-        font-size: vw(32, 1280)
         letter-spacing: -.03em
+        font-size: vw(32, 1280)
 
       +mq(minLarge)
         margin-bottom: rem(20)
