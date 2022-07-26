@@ -7,8 +7,9 @@ import { Contents } from '../../styles/common'
 import { colors, Rem } from '../../styles/designSystem'
 
 const Container = styled.section(({ isFirst }) => ({
-  color: colors.black,
+  backgroundColor: colors.background,
   position: 'relative',
+  color: colors.black,
   '&::before': {
     content: "''",
     display: isFirst ? null : 'block',

@@ -1,5 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'react-i18next'
+import Footer from '../components/layout/footer'
 import Features from '../components/sections/features'
 import Partners from '../components/sections/partners'
 import Reason from '../components/sections/reason'
@@ -14,6 +15,7 @@ function Home() {
       <Partners />
       <Reason />
       <Features />
+      <Footer />
     </>
   )
 }

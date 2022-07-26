@@ -95,3 +95,8 @@ export function Em(px) {
   const result = px / 16;
   return `${result}em`;
 };
+
+export function Vw(px, width) {
+  const result = px * 100 / width;
+  return `${result}vw`;
+}
