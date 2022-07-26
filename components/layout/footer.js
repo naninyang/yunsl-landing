@@ -49,8 +49,8 @@ function Footer() {
           <LinkButton href='https://saemmulter.com/'><Svg /></LinkButton>
         </Company>
         <div className={styles['footer']}>
-          <p>cgwaterlb@gmail.com</p>
-          <p>+82-10-7413-1102</p>
+          <p><a href='mailto:cgwaterlb@gmail.com'>cgwaterlb@gmail.com</a></p>
+          <p><a href='tel:+82-10-7413-1102'>+82-10-7413-1102</a></p>
           <p>{t('footer.registration')}</p>
           <address>{t('footer.address')}</address>
           <strong>© Saemmulter Inc.</strong>
