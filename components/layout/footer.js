@@ -12,13 +12,19 @@ const Container = styled.footer({
 const Contents = styled.div({
   ...mixin.widthSettings,
   [mq.maxTablet]: {
-    padding: `${Vw(50, 320)} ${Rem(25)}`,
+    padding: `${Vw(25, 320)} ${Rem(25)}`,
   },
   [mq.minXsmall]: {
     padding: `${Vw(50, 1280)} ${Rem(25)}`,
   },
   [mq.minLarge]: {
     padding: `${Rem(50)} ${Rem(25)}`,
+  },
+})
+
+const Company = styled.div({
+  '& a': {
+    display: 'inline-block',
   },
 })
 
@@ -39,7 +45,9 @@ function Footer() {
   return (
     <Container>
       <Contents>
-        <LinkButton href='https://saemmulter.com/'><Svg /></LinkButton>
+        <Company>
+          <LinkButton href='https://saemmulter.com/'><Svg /></LinkButton>
+        </Company>
         <div className={styles['footer']}>
           <p>cgwaterlb@gmail.com</p>
           <p>+82-10-7413-1102</p>
