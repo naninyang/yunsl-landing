@@ -1,0 +1,57 @@
+@import './designSystem.sass'
+
+.contents
+  & + picture
+    display: block
+
+    +mq(minXsmall)
+      width: vw(700, 1280)
+
+    +mq(minLarge)
+      width: rem(700)
+
+  .headline
+    h2
+      margin-bottom: rem(50)
+      font-weight: 900
+      font-size: vw(22, 320)
+      line-height: 1.41666667
+
+      +mq(minXsmall)
+        margin-bottom: vw(50, 1280)
+        font-size: vw(48, 1280)
+
+      +mq(minLarge)
+        margin-bottom: rem(50)
+        font-size: rem(48)
+
+      span
+        display: block
+
+  .description
+    +mq(minXsmall)
+      margin-top: vw(50, 1280)
+
+    +mq(minLarge)
+      margin-top: rem(50)
+
+    p
+      margin-bottom: vw(5, 320)
+      font-weight: 400
+      font-size: vw(14, 320)
+      line-height: 1.5
+
+      +mq(minXsmall)
+        margin-bottom: vw(20, 1280)
+        font-size: vw(32, 1280)
+
+      +mq(minLarge)
+        margin-bottom: rem(20)
+        font-size: rem(32)
+
+      span
+        display: block
+        line-height: 1.5
+
+      strong
+        font-weight: 900
