@@ -3,5 +3,9 @@
     "primary": "blah blah",
     "secondary1": "...",
     "secondary2": "..."
+  },
+  "footer": {
+    "address": "403, Social-campus On, 239, Daedeok-daero, Seo-gu, Daejeon, 35229, Rep. of KOREA",
+    "registration": "Business Registration No. 511-81-26566"
   }
 }
