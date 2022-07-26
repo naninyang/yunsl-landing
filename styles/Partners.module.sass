@@ -1,10 +1,14 @@
 @import './designSystem.sass'
 
 .contents
+  +mq(minXsmall)
+    position: relative
+
   & + picture
     display: none
 
     +mq(minXsmall)
+      position: relative
       display: block
       width: vw(570, 1280)
 
