@@ -26,6 +26,7 @@
 
     +mq(minXsmall)
       position: absolute
+      z-index: 1
       transform: translate(0, -50%)
       top: 50%
       right: vw(-320, 1024)
@@ -99,6 +100,10 @@
   .description
     +mq(maxTablet)
       text-align: center
+
+    +mq(minXsmall)
+      position: relative
+      z-index: 1
 
     p
       font-size: vw(11, 320)
